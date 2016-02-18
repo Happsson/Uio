@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".Screens.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@drawable/bg2"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/logo2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Current Projects"
-        android:id="@+id/tvCurrentProjects"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:id="@+id/buttonAdd"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
 
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvProjectList"
-        android:layout_toStartOf="@+id/buttonAdd"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/tvCurrentProjects"
-        android:layout_above="@+id/buttonAdd" />
-</RelativeLayout>
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:id="@+id/listRecipes"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.45"
+        android:background="@drawable/listbg" />
+
+    <Button
+        android:layout_width="89dp"
+        android:layout_height="76dp"
+        android:id="@+id/button"
+        android:layout_gravity="right"
+        android:background="@drawable/add" />
+</LinearLayout>

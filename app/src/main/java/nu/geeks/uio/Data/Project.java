@@ -32,7 +32,6 @@ public class Project implements Parcelable {
         transactionStrings = new ArrayList<>();
     }
 
-
     protected Project(Parcel in) {
         projectName = in.readString();
         projectPassword = in.readString();
